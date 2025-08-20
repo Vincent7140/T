@@ -1,0 +1,12 @@
+La résolution des images d’entraînement conditionne directement la qualité de reconstruction d’un NeRF.
+
+Des images haute résolution apportent plus de détails fins (textures, contours) et permettent donc un rendu plus précis.
+
+Toutefois, elles augmentent fortement le coût d’entraînement et peuvent encourager le surapprentissage si le réseau n’a pas la capacité de généraliser ces détails.
+
+À l’inverse, des images basse résolution limitent la qualité finale car une partie de l’information est perdue.
+
+Tester différentes résolutions permet donc d’évaluer le compromis entre qualité visuelle, temps de calcul et risque de surapprentissage, et d’identifier la résolution optimale pour un scénario donné.
+
+
+Nous observons que des images reconstruites à plus faible résolution obtiennent de meilleurs scores en PSNR et SSIM, mais un MAE moins favorable. Cela s’explique par la différence entre les métriques : PSNR et SSIM privilégient la qualité visuelle et la cohérence structurelle globale, qui sont renforcées par des reconstructions plus lisses. En revanche, le MAE mesure l’erreur pixel par pixel et pénalise ces lissages, ce qui conduit à une fidélité locale moindre malgré une meilleure apparence globale
