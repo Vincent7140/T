@@ -1,0 +1,24 @@
+
+
+L’objectif de ce stage était d’explorer les nouvelles techniques de représentation implicite de scènes par réseaux de neurones (NeRF), appliquées aux images satellites. À l’issue de l’étude bibliographique, un premier modèle a été retenu : **SPS-NeRF**. Ce choix a ensuite été révisé car ce modèle ne correspondait pas pleinement aux besoins de l’étude. Le modèle finalement utilisé a été **Shadow-NeRF**, plus adapté aux problématiques spécifiques aux images satellites et permettant de générer de nouvelles vues à partir d’un jeu de données limité.
+
+Les premiers tests ont mis en évidence plusieurs facteurs limitants. Les résultats de reconstruction se sont révélés insuffisants, aussi bien d’un point de vue qualitatif que quantitatif. Cette difficulté est en grande partie liée au nombre restreint d’images d’entraînement disponibles. Plusieurs séries d’expériences ont donc été menées afin d’optimiser les paramètres et d’améliorer la qualité des résultats.
+
+Une partie du travail a également porté sur l’amélioration de l’échantillonnage des rayons, paramètre essentiel pour la convergence et la précision du NeRF.
+
+Au final, les objectifs fixés n’ont pas été entièrement atteints :
+
+* le modèle n’est pas encore capable de produire des reconstructions 3D pleinement satisfaisantes,
+* les images générées présentent encore du flou,
+* le temps d’entraînement reste élevé.
+
+Néanmoins, ces résultats constituent une première étape encourageante.
+
+Des perspectives d’évolution sont envisageables, parmi lesquelles :
+
+* augmenter le nombre d’images disponibles pour l’entraînement,
+* améliorer les stratégies d’échantillonnage sur de longues distances,
+* tester d’autres jeux de données,
+* explorer différentes combinaisons de paramètres et d’architectures de NeRF.
+
+-
